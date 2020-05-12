@@ -50,6 +50,14 @@ Then you can sample your texture by simply calling `bccTex3D` or `fccTex3D` temp
 
 Both functions have template parameters as well. You have to specify the filter used by the conversion, the type of coordinates (`Coordinates::Normalized`, `Coordinates::Unnormalized`) and the type of texture samples. In case of texture references, you also have to specify *read mode* of the texture (`cudaTextureReadMode`). 
 
+### Renderings
+
+![Bucky data set (CC, trilinear B-spline)](images/bucky_iso_cc_tril.jpg "Bucky data set (CC, trilinear B-spline)")
+
+![Bucky data set (BCC, trilinear B-spline)](images/bucky_iso_bcc_tril.jpg "Bucky data set (BCC, trilinear B-spline)")
+
+![Bucky data set (BCC, linear (four-directional) box spline)](images/bucky_iso_bcc_box.jpg "Bucky data set (BCC, linear (four-directional) box spline)")
+
 ### Contact
 
 If you have any questions or want to discuss the topic, contact me at *gracz [at] iit [dot] bme [dot] hu*.
