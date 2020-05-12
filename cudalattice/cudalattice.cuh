@@ -14,7 +14,6 @@
 #ifndef _CUDALATTICE_H_
 #define _CUDALATTICE_H_
 
-
 //////////////////////////////////////////////////
 //  include necessary headers
 
@@ -33,6 +32,5 @@
 #ifndef CUDALATTICE_NO_USING
 using namespace CudaLattice::Texture;
 #endif
-
 
 #endif /* _CUDALATTICE_H_ */

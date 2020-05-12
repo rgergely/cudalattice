@@ -17,60 +17,60 @@
 
 namespace CudaLattice
 {
-	namespace Texture
-	{
-		namespace Lattice { enum LatticeType { CC = 1, BCC = 2, FCC = 4 }; }
-		namespace Filter { enum FilterType { TrilinearBSpline, CubicBSpline, LinearBoxSpline, CWLB, CWCB }; }
-		namespace Coordinates { enum CoordinateType { Normalized, Unnormalized }; }
-		namespace Format { enum TextureFormatType { Blocked, Layered }; }
-		namespace Resizer { enum ResizerType { PreserveDensity, DoubleDense, HalfDense }; }
+    namespace Texture
+    {
+        namespace Lattice { enum LatticeType { CC = 1, BCC = 2, FCC = 4 }; }
+        namespace Filter { enum FilterType { TrilinearBSpline, CubicBSpline, LinearBoxSpline, CWLB, CWCB }; }
+        namespace Coordinates { enum CoordinateType { Normalized, Unnormalized }; }
+        namespace Format { enum TextureFormatType { Blocked, Layered }; }
+        namespace Resizer { enum ResizerType { PreserveDensity, DoubleDense, HalfDense }; }
 
 
-		//////////////////////////////////////////////////
-		//  LATTICE TYPE INFORMATIONS
+        //////////////////////////////////////////////////
+        //  LATTICE TYPE INFORMATIONS
 
-		//template <enum Lattice::LatticeType lattice>
-		//struct LatticeTypeInfo
-		//{};
+        //template <enum Lattice::LatticeType lattice>
+        //struct LatticeTypeInfo
+        //{};
 
-		//template <>
-		//struct LatticeTypeInfo<Lattice::CC>
-		//{
-		//	static const int num_cc_comp = 1;
-		//};
+        //template <>
+        //struct LatticeTypeInfo<Lattice::CC>
+        //{
+        //    static const int num_cc_comp = 1;
+        //};
 
-		//template <>
-		//struct LatticeTypeInfo<Lattice::BCC>
-		//{
-		//	static const int num_cc_comp = 2;
-		//};
+        //template <>
+        //struct LatticeTypeInfo<Lattice::BCC>
+        //{
+        //    static const int num_cc_comp = 2;
+        //};
 
-		//template <>
-		//struct LatticeTypeInfo<Lattice::FCC>
-		//{
-		//	static const int num_cc_comp = 4;
-		//};
+        //template <>
+        //struct LatticeTypeInfo<Lattice::FCC>
+        //{
+        //    static const int num_cc_comp = 4;
+        //};
 
 
-		//////////////////////////////////////////////////
-		//  FILTER TYPE INFORMATIONS
+        //////////////////////////////////////////////////
+        //  FILTER TYPE INFORMATIONS
 
-		template <enum Filter::FilterType filter>
-		struct FilterTypeInfo
-		{};
+        template <enum Filter::FilterType filter>
+        struct FilterTypeInfo
+        {};
 
-		template <>
-		struct FilterTypeInfo<Filter::TrilinearBSpline>
-		{
-			static const enum Format::TextureFormatType texture_format = Format::Blocked;
-		};
+        template <>
+        struct FilterTypeInfo<Filter::TrilinearBSpline>
+        {
+            static const enum Format::TextureFormatType texture_format = Format::Blocked;
+        };
 
-		template <>
-		struct FilterTypeInfo<Filter::LinearBoxSpline>
-		{
-			static const enum Format::TextureFormatType texture_format = Format::Layered;
-		};
-	}
+        template <>
+        struct FilterTypeInfo<Filter::LinearBoxSpline>
+        {
+            static const enum Format::TextureFormatType texture_format = Format::Layered;
+        };
+    }
 }
 
 #endif /* _CUDALATTICE_ENUM_TYPES_ */
